@@ -26,19 +26,18 @@ def f():
 					a1 = randint(1,6)
 					if a1 == 1:
 						print ('After this round User1 you now have: %d Points'%t1)
-						
 						sleep(1)
 						break
 					else:
 						t1 += a1
 						print ('After this round User1 you now have: %d Points'%t1)
-						#return t1
 						sleep(1)
 						continue
 			
 				else:
 					break
-			#return t1
+			
+			
 		b = randint(1,6)
 		if b == 1:
 			print ('After this round User2 you now have: %d Points'%t2)
@@ -48,8 +47,8 @@ def f():
 		
 			t2 += b
 			print ('After this round User2 you now have: %d Points'%t2)
-			#sleep(1)
-			while  t2 <= 100:
+			
+			while  t1 <= 100 and t2 <= 100:
 				x = input('press Enter to reroll or press anything else to end ur chance : ')
 				if x == '':
 					b1 = randint(1,6)
@@ -61,18 +60,16 @@ def f():
 					else:
 						t2 += b1
 						print ('After this round User2 you now have: %d Points'%t2)
-						#return t2
+						
 						sleep(1)
 						continue		
 				
 				else:
 					break
-			#	return t2
 			
-	
+	if t1 >= 100:
+		print ('\n*******user1 wins..congrats***********')
+	elif t2 >= 100:
+		print ('\n*******user2 wins..congrats***********')
 				
-f()		
-				
-				
-				
-			
+f()
